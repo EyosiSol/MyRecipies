@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import Style from "../Styles/Foods.module.css";
 export default function FoodItem({ item }) {
   return (
@@ -8,12 +7,8 @@ export default function FoodItem({ item }) {
         <p className={Style.itemTitle}>{item.title}</p>
       </div>
       <div className={Style.viewBtn}>
-        <button>View recipe</button>
+        <button onClick='' id={item.id}>View recipe</button>
       </div>
     </div>
   );
 }
-
-FoodItem.propTypes = {
-  item: PropTypes.object,
-};

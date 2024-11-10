@@ -2,20 +2,27 @@ import { useState } from "react";
 import SearchBar from "./searchBar";
 import FoodList from "./foodList";
 import Nav from "./Nav";
-import Style from "../Styles/FoodApp.module.css";
+import Container from "../components/Container.jsx";
+import style from '../Styles/container.module.css'
+import LeftContainer from "../components/leftContainer.jsx";
+import rightContainer from "../components/rightContainer.jsx";
+import FoodDetails from "../components/FoodDetails.jsx";
+
+
 export default function FoodApp() {
   const [foodData, setFoodData] = useState([]);
   return (
     <>
       <Nav />
       <SearchBar foodData={foodData} setFoodData={setFoodData} />
-      <div className={Style.container}>
-        <div className={Style.leftDiv}>
-          <h2>Search Result:</h2>
+      <Container>
+        <LeftContainer>
           <FoodList foodData={foodData} />
-        </div>
-        <div className={Style.rightDiv}></div>
-      </div>
+        </LeftContainer>
+      <rightContainer>
+        <FoodDetails/>
+      </rightContainer>
+      </Container>
     </>
   );
 }

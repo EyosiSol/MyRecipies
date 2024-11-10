@@ -1,11 +1,8 @@
-import PropTypes from 'prop-types';
 import FoodItem from './FoodItem';
 export default function foodList({foodData}){
-    return(<>
+    return(<div>
+        <h2>Search Result:</h2>
         {foodData.map((item)=>(<FoodItem key={item.id} item={item}/>))}
-    </>)
+    </div>)
 }
 
-foodList.proptypes = {
-    foodData : PropTypes.object
-}
