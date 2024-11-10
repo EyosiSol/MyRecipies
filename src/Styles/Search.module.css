@@ -1,0 +1,19 @@
+.searchContainer{
+    margin: 20px auto;
+    width: 100%;
+    position: relative;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.inputBar{
+    
+    width: 400px;
+    height: 30px;
+    font-size: 1.2rem;
+    border: 1px solid rgb(237, 231, 231);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}

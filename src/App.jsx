@@ -1,7 +1,10 @@
+import FoodApp from "./components/FoodApp.jsx";
+import './Styles/App.css'
 function App() {
   return (
     <>
-      <h1>Hello User!</h1>
+      <FoodApp/>
+      
     </>
   );
 }
