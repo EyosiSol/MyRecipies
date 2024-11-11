@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
+import Styles from '../Styles/foodDetails.module.css'
+import FoodRecipeDetail from "./FoodRecipeDetail";
+import Hourstook from "./Hourstook";
+import Recipies from "./recipes";
+import Instructions from "./instructions";
 
 function FoodDetails({ foodId }) {
   const URL = `https://api.spoonacular.com/recipes/${foodId}/information`;
-  const API_KEY = "c4eb7e5e35f046d396cab4c33b9c5612";
+  const API_KEY = "13568cbfc97e41cbbb44c57544063044";
   const [foodInfo, setfoodInfo] = useState({});
   useEffect(() => {
     async function FetchDetail() {
@@ -15,7 +20,7 @@ function FoodDetails({ foodId }) {
   }, [foodId]);
   return (
     <>
-      <div className="Header">
+      <div className={Styles.header}>
         <h1>Food Details</h1>
       </div>
       <div className="detail">
@@ -24,30 +29,14 @@ function FoodDetails({ foodId }) {
           <img src={foodInfo.image} alt={foodInfo.title} />
           <p>${foodInfo.pricePerServing}</p>
         </div>
-        <div className="recipedetails">
-          <div className="vegie">
-            <h4>Vegeterian: {foodInfo.vegeterian ? <p>Yes</p> : <p>No</p>}</h4>
-          </div>
-          <div className="vegan">
-            <h4>Vegean: {foodInfo.vegan ? <p>Yes</p> : <p>No</p>}</h4>
-          </div>
-          <div className="glutan">
-            <h4>Glutan Free: {foodInfo.glutenFree ? <p>Yes</p> : <p>No</p>}</h4>
-          </div>
-          <div className="healty">
-            <h4>
-              Very healty?: {foodInfo.veryHealthy ? <p>Yes</p> : <p>No</p>}
-            </h4>
-          </div>
-        </div>
-        <div className="hrs">
-          <h5> Preparation Min: {foodInfo.preparationMinutes}</h5>
-          <h5> Cooking Min: {foodInfo.cookingMinutes}</h5>
-          <h5> Serving: {foodInfo.servings}</h5>
-          <h5> Health Score: {foodInfo.healthScore}</h5>
-        </div>
+        <FoodRecipeDetail foodInfo={foodInfo}/>
+        <Hourstook foodInfo={foodInfo}/>
+        <Recipies foodInfo={foodInfo}/>
+        <Instructions foodInfo={foodInfo}/>
       </div>
     </>
   );
 }
 export default FoodDetails;
+
+///https://spoonacular.com/cdn/ingredients_100x100/{image}

@@ -11,7 +11,7 @@ import FoodDetails from "../components/FoodDetails.jsx";
 
 export default function FoodApp() {
   const [foodData, setFoodData] = useState([]);
-  const [FoodID,setFoodId] = useState(635675)
+  const [FoodID,setFoodId] = useState(715415)
   return (
     <>
       <Nav />
