@@ -1,7 +1,8 @@
+import Style from '../Styles/instruction.module.css'
 export default function Instructions({ foodInfo }) {
   return (
-    <div className="instruction">
-      <h3>Instruction:</h3>
+    <div className={Style.container}>
+      <h2>Instruction:</h2>
       <div>
         <div>
           {foodInfo.analyzedInstructions &&
@@ -9,7 +10,7 @@ export default function Instructions({ foodInfo }) {
             foodInfo.analyzedInstructions[0].steps &&
             foodInfo.analyzedInstructions[0].steps.map((step, index) => (
               <div key={index}>
-                {step.number} {step.step}
+                {step.number})    {step.step}
               </div>
             ))}
         </div>

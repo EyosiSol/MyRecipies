@@ -7,7 +7,7 @@ import Instructions from "./instructions";
 
 function FoodDetails({ foodId }) {
   const URL = `https://api.spoonacular.com/recipes/${foodId}/information`;
-  const API_KEY = "cc36235140ea407eb930da82b1a9c733";
+  const API_KEY = "7efd7aae4bed4c5784297318df42f934";
   const [foodInfo, setfoodInfo] = useState({});
   useEffect(() => {
     async function FetchDetail() {
@@ -31,11 +31,11 @@ function FoodDetails({ foodId }) {
           </div>
           <p>${foodInfo.pricePerServing}</p>
         </div>
-
         <FoodRecipeDetail foodInfo={foodInfo} />
         <Hourstook foodInfo={foodInfo} />
         <Recipies foodInfo={foodInfo} />
         <Instructions foodInfo={foodInfo} />
+        <h1>ENJOY!!!</h1>
       </div>
     </div>
   );
