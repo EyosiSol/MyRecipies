@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SearchBar from "./searchBar";
+import SearchBar from "./SearchBar";
 import FoodList from "./foodList";
 import Nav from "./Nav";
 import Container from "../components/Container.jsx";
