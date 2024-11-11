@@ -1,17 +1,18 @@
-export default function FoodRecipeDetail({foodInfo}) {
+import Styles from "../Styles/foodRecipeDetail.module.css";
+export default function FoodRecipeDetail({ foodInfo }) {
   return (
-    <div className="recipedetails">
-      <div className="vegie">
-        <h4>Vegeterian: {foodInfo.vegeterian ? <p>Yes</p> : <p>No</p>}</h4>
+    <div className={Styles.recipeDetail}>
+      <div className={Styles.vegie}>
+        <h2>🫛Vegeterian:</h2> {foodInfo.vegeterian ? <p>✅</p> : <p>❌</p>}
       </div>
-      <div className="vegan">
-        <h4>Vegean: {foodInfo.vegan ? <p>Yes</p> : <p>No</p>}</h4>
+      <div className={Styles.vegan}>
+        <h2>🥛Vegean:</h2> {foodInfo.vegan ? <p>✅</p> : <p>❌</p>}
       </div>
-      <div className="glutan">
-        <h4>Glutan Free: {foodInfo.glutenFree ? <p>Yes</p> : <p>No</p>}</h4>
+      <div className={Styles.glutan}>
+        <h2>🧈Glutan Free:</h2> {foodInfo.glutenFree ? <p>✅</p> : <p>❌</p>}
       </div>
-      <div className="healty">
-        <h4>Very healty?: {foodInfo.veryHealthy ? <p>Yes</p> : <p>No</p>}</h4>
+      <div className={Styles.healthy}>
+        <h2>👨‍⚕️Very healty?:</h2> {foodInfo.veryHealthy ? <p>✅</p> : <p>❌</p>}
       </div>
     </div>
   );
