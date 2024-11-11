@@ -3,7 +3,7 @@ import SearchBar from "./searchBar";
 import FoodList from "./foodList";
 import Nav from "./Nav";
 import Container from "../components/Container.jsx";
-import style from '../Styles/container.module.css'
+// import style from '../Styles/container.module.css'
 import LeftContainer from "../components/leftContainer.jsx";
 import RightContainer from "../components/rightContainer.jsx";
 import FoodDetails from "../components/FoodDetails.jsx";
@@ -11,7 +11,7 @@ import FoodDetails from "../components/FoodDetails.jsx";
 
 export default function FoodApp() {
   const [foodData, setFoodData] = useState([]);
-  const [FoodID,setFoodId] = useState(715415)
+  const [FoodID,setFoodId] = useState(635675)
   return (
     <>
       <Nav />
